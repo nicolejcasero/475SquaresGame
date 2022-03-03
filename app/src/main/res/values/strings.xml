@@ -20,4 +20,8 @@
     <string name="todo">TODO</string>
     <string name="choose_a_mode">Choose a mode.</string>
     <string name="single_player">Single Player</string>
+    <string name="your_turn">YOUR TURN</string>
+    <string name="_1">1</string>
+    <string name="_0">0</string>
+    <string name="logo">LOGO</string>
 </resources>
