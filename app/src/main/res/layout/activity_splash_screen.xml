@@ -23,13 +23,10 @@
         android:layout_height="40dp"
         android:layout_alignEnd="@id/logo_id"
         android:layout_centerInParent="true"
-        android:layout_centerVertical="true"
         android:layout_marginEnd="-4dp"
         android:layout_toStartOf="@id/logo_id"
         android:progressBackgroundTint="@color/cool_white"
         android:progressBackgroundTintMode="add"
         android:progressTint="@color/tanish_pink"
         android:progressTintMode="src_in" />
-
-
 </RelativeLayout>

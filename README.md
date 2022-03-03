@@ -4,4 +4,4 @@ Team members:
 - Christine Angeles
 - Nicole Casero
 - Cvana Clarkson
-- Megan Nguyen 
+- Meagan Nguyen 
