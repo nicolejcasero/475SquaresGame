@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SplashActivity"
+    android:layout_centerHorizontal="true"
+    android:background="@color/dark_teal"
+    android:gravity="center">
+
+    <ImageView
+        android:id="@+id/logo_id"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_marginStart="82dp"
+        android:layout_marginTop="135dp"
+        android:layout_marginEnd="80dp"
+        android:layout_marginBottom="12dp"
+        android:background="@color/dark_teal"
+        android:contentDescription="@string/logo"
+        android:scaleType="fitEnd"
+        app:layout_constraintBottom_toTopOf="@+id/splash_screen_progress_bar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@mipmap/square_logo_foreground"
+        tools:ignore="ImageContrastCheck" />
+
+    <ProgressBar
+        android:id="@+id/splash_screen_progress_bar"
+        style="@android:style/Widget.Holo.Light.ProgressBar.Horizontal"
+        android:layout_width="250dp"
+        android:layout_height="40dp"
+        android:layout_alignEnd="@id/logo_id"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="82dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="80dp"
+        android:layout_marginBottom="290dp"
+        android:layout_toStartOf="@id/logo_id"
+        android:progressBackgroundTint="@color/cool_white"
+        android:progressBackgroundTintMode="add"
+        android:progressTint="@color/tanish_pink"
+        android:progressTintMode="src_in"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logo_id" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
