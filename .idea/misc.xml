@@ -3,7 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/chris/AndroidStudioProjects/475SquaresGame/app/src/main/res/layout/activity_game_page.xml" value="0.14682539682539683" />
+        <entry key="..\:/Users/chris/AndroidStudioProjects/475SquaresGame/app/src/main/res/drawable/home.xml" value="0.167" />
+        <entry key="..\:/Users/chris/AndroidStudioProjects/475SquaresGame/app/src/main/res/drawable/pause.xml" value="0.167" />
+        <entry key="..\:/Users/chris/AndroidStudioProjects/475SquaresGame/app/src/main/res/layout/activity_game_page.xml" value="0.22333333333333336" />
         <entry key="..\:/Users/chris/AndroidStudioProjects/475SquaresGame/app/src/main/res/layout/activity_main.xml" value="0.23333333333333334" />
       </map>
     </option>
