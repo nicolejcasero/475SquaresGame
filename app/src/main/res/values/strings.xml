@@ -15,4 +15,9 @@
         For more information, see https://support.google.com/admob/answer/3052638
     <!- -->
     <string name="interstitial_ad_unit_id">ca-app-pub-3940256099942544/1033173712</string>
+    <string name="choose_your_avatar">Choose your avatar.</string>
+    <string name="multi_player">Multi Player</string>
+    <string name="todo">TODO</string>
+    <string name="choose_a_mode">Choose a mode.</string>
+    <string name="single_player">Single Player</string>
 </resources>

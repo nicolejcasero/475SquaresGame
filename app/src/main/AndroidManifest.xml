@@ -10,9 +10,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.475UXUI">
         <activity
-            android:name=".SplashScreen"
-            android:exported="true"
-            android:label="Squares">
+            android:name=".HomeScreen"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
