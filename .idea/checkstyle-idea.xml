@@ -3,8 +3,12 @@
   <component name="CheckStyle-IDEA">
     <option name="configuration">
       <map>
+<<<<<<< HEAD
         <entry key="checkstyle-version" value="8.37" />
 <<<<<<< HEAD
+=======
+        <entry key="checkstyle-version" value="10.0" />
+>>>>>>> christine
         <entry key="copy-libs" value="true" />
 =======
         <entry key="copy-libs" value="false" />
