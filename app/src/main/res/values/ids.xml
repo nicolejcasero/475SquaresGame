@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="rl" type="id">relative_layout</item>
+    <item name="rl_customlayout" type="id">rl_customlayout</item>
+    <item name="ib_close" type="id">ib_close</item>
+</resources>
