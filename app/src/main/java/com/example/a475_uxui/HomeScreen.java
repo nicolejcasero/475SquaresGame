@@ -29,4 +29,5 @@ public class HomeScreen extends AppCompatActivity {
         Intent intent = new Intent(this, GamePage.class);
         startActivity(intent);
     }
+
 }

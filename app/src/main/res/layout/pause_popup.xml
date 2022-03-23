@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background= "#006D77">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="30dp"
+        android:textSize="22sp"
+        android:text= "~Connect dots horizontally or vertically to close a square.
+
+                                               ~To link two dots, touch space in between.
+
+                                                  ~When fourth segment of a 1x1 square is drawn by a player, that square is theirs and will be filled with their color.
+
+                                                           ~You will alternate turns with your opponent, BUT if a player gains a square, they can continue playing.
+
+                   ~When there are no more dots to connect, the game is over and the player with the most squares wins!
+
+                               ~Each square gained is worth one point."
+        tools:ignore="MissingConstraints" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
