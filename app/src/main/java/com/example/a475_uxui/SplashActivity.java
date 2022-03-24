@@ -23,7 +23,7 @@ public class SplashActivity extends AppCompatActivity {
         });
     }
     public void openHome() {
-        Intent intent = new Intent(this, HomeScreen.class);
+        Intent intent = new Intent(this, HomeScreenChooseMode.class);
         startActivity(intent);
     }
 }
