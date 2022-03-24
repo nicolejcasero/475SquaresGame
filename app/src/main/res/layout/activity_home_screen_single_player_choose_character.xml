@@ -48,29 +48,32 @@
         android:id="@+id/multi_player_button_unselected"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="34dp"
+        android:layout_marginTop="24dp"
         android:layout_marginEnd="40dp"
         android:layout_marginBottom="435dp"
+        android:contentDescription="@string/todo"
         android:src="@drawable/multiplayer_button_unselected"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/choose_mode_textview"
-        android:contentDescription="@string/todo" />
+        app:layout_constraintVertical_bias="0.0" />
 
     <ImageView
         android:id="@+id/single_player_button_selected"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
-        android:layout_marginTop="34dp"
+        android:layout_marginTop="24dp"
         android:layout_marginEnd="31dp"
         android:layout_marginBottom="435dp"
+        android:contentDescription="@string/todo"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/multi_player_button_unselected"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/choose_mode_textview"
-        app:srcCompat="@drawable/single_player_button_selected"
-        android:contentDescription="@string/todo" />
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/single_player_button_selected" />
 
     <ImageView
         android:id="@+id/mouse_avatar"
@@ -155,5 +158,18 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/mouse_avatar"
         app:srcCompat="@drawable/tiger_avatar" />
+
+    <ImageView
+        android:id="@+id/start_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="40dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView11"
+        app:srcCompat="@drawable/start_game_button"
+        android:contentDescription="@string/todo" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

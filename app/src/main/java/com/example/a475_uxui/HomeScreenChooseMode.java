@@ -24,7 +24,7 @@ public class HomeScreenChooseMode extends AppCompatActivity {
                 openHomeScreenSinglePlayerChooseCharacter();
             }
         });
-        }
+    }
 
         /*imageView = (ImageView) findViewById(R.id.imageView12);
         imageView.setOnClickListener(new View.OnClickListener() {
