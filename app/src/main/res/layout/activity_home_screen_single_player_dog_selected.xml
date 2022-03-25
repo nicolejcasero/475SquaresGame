@@ -128,7 +128,7 @@
         app:srcCompat="@drawable/dog_avatar_selected" />
 
     <ImageView
-        android:id="@+id/dragon_avatar_selected"
+        android:id="@+id/dragon_avatar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
@@ -151,7 +151,7 @@
         app:srcCompat="@drawable/snake_avatar" />
 
     <ImageView
-        android:id="@+id/imageView11"
+        android:id="@+id/tiger_avatar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
