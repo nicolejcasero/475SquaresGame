@@ -7,25 +7,25 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 
-public class HomeScreenSinglePlayerSnakeSelected extends AppCompatActivity {
+public class HomeScreenSinglePlayerTigerSelected extends AppCompatActivity {
 
     private ImageView start_button;
     private ImageView dog_avatar;
     private ImageView pig_avatar;
     private ImageView mouse_avatar;
     private ImageView dragon_avatar;
-    private ImageView tiger_avatar;
+    private ImageView snake_avatar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_home_screen_single_player_snake_selected);
+        setContentView(R.layout.activity_home_screen_single_player_tiger_selected);
 
-        tiger_avatar = (ImageView) findViewById(R.id.tiger_avatar);
-        tiger_avatar.setOnClickListener(new View.OnClickListener() {
+        snake_avatar = (ImageView) findViewById(R.id.snake_avatar);
+        snake_avatar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                selectTiger();
+                selectSnake();
             }
         });
 
@@ -95,8 +95,8 @@ public class HomeScreenSinglePlayerSnakeSelected extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void selectTiger() {
-        Intent intent = new Intent(this, HomeScreenSinglePlayerTigerSelected.class);
+    public void selectSnake() {
+        Intent intent = new Intent(this, HomeScreenSinglePlayerSnakeSelected.class);
         startActivity(intent);
     }
 }

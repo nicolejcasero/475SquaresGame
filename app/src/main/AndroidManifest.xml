@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.475UXUI">
         <activity
+            android:name=".HomeScreenSinglePlayerTigerSelected"
+            android:exported="false" />
+        <activity
             android:name=".HomeScreenSinglePlayerSnakeSelected"
             android:exported="false" />
         <activity
