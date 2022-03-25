@@ -11,6 +11,7 @@
         <entry key="app/src/main/res/layout/activity_home_screen_choose_mode.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_home_screen_multi_player_choose_character.xml" value="0.3770645141601563" />
         <entry key="app/src/main/res/layout/activity_home_screen_multi_player_choose_character_player_one.xml" value="0.29134521484375003" />
+        <entry key="app/src/main/res/layout/activity_home_screen_multi_player_choose_character_player_two.xml" value="0.3393564860026042" />
         <entry key="app/src/main/res/layout/activity_home_screen_multi_player_dog_selected_player_one.xml" value="0.4340052286783853" />
         <entry key="app/src/main/res/layout/activity_home_screen_single_player_choose_character.xml" value="0.23009796142578143" />
         <entry key="app/src/main/res/layout/activity_home_screen_single_player_dog_selected.xml" value="0.24479166666666666" />

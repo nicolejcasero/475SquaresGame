@@ -7,21 +7,21 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 
-public class HomeScreenMultiPlayerDogSelectedPlayerOne extends AppCompatActivity {
+public class HomeScreenMultiPlayerChooseCharacterPlayerTwo extends AppCompatActivity {
 
     private ImageView single_player_button;
-    private ImageView dog_avatar_selected;
+    private ImageView dog_avatar_taken_multi_player;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_home_screen_multi_player_dog_selected_player_one);
+        setContentView(R.layout.activity_home_screen_multi_player_choose_character_player_two);
 
-        dog_avatar_selected = (ImageView) findViewById(R.id.dog_avatar_selected_multi_player);
-        dog_avatar_selected.setOnClickListener(new View.OnClickListener() {
+        dog_avatar_taken_multi_player = (ImageView) findViewById(R.id.dog_avatar_taken_multi_player);
+        dog_avatar_taken_multi_player.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                openPlayerTwoSelectCharacter();
+                openMultiPlayerChooseCharacterPlayerOne();
             }
         });
 
@@ -39,8 +39,8 @@ public class HomeScreenMultiPlayerDogSelectedPlayerOne extends AppCompatActivity
         startActivity(intent);
     }
 
-    public void openPlayerTwoSelectCharacter() {
-        Intent intent = new Intent(this, HomeScreenMultiPlayerChooseCharacterPlayerTwo.class);
+    public void openMultiPlayerChooseCharacterPlayerOne() {
+        Intent intent = new Intent(this, HomeScreenMultiPlayerChooseCharacterPlayerOne.class);
         startActivity(intent);
     }
 }
