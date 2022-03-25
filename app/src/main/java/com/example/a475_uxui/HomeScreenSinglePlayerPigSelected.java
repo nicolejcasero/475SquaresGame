@@ -11,6 +11,7 @@ public class HomeScreenSinglePlayerPigSelected extends AppCompatActivity {
 
     private ImageView start_button;
     private ImageView dog_avatar;
+    private ImageView mouse_avatar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,6 +23,14 @@ public class HomeScreenSinglePlayerPigSelected extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 selectDog();
+            }
+        });
+
+        mouse_avatar = (ImageView) findViewById(R.id.mouse_avatar);
+        mouse_avatar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                selectMouse();
             }
         });
 
@@ -41,6 +50,11 @@ public class HomeScreenSinglePlayerPigSelected extends AppCompatActivity {
 
     public void selectDog(){
         Intent intent = new Intent(this, HomeScreenSinglePlayerDogSelected.class);
+        startActivity(intent);
+    }
+
+    public void selectMouse() {
+        Intent intent = new Intent(this, HomeScreenSinglePlayerMouseSelected.class);
         startActivity(intent);
     }
 }
