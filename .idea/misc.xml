@@ -8,7 +8,7 @@
         <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.18" />
         <entry key="app/src/main/res/layout/activity_game_page.xml" value="0.2559967041015625" />
         <entry key="app/src/main/res/layout/activity_home_screen.xml" value="0.2780763898577009" />
-        <entry key="app/src/main/res/layout/activity_home_screen_choose_mode.xml" value="0.218768310546875" />
+        <entry key="app/src/main/res/layout/activity_home_screen_choose_mode.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_home_screen_single_player_choose_character.xml" value="0.23009796142578143" />
         <entry key="app/src/main/res/layout/activity_home_screen_single_player_dog_selected.xml" value="0.24479166666666666" />
         <entry key="app/src/main/res/layout/activity_home_screen_single_player_dragon_selected.xml" value="0.24479166666666666" />
