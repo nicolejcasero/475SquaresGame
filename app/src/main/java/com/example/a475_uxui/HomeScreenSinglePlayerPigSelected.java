@@ -3,6 +3,7 @@ package com.example.a475_uxui;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.media.Image;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
@@ -13,11 +14,20 @@ public class HomeScreenSinglePlayerPigSelected extends AppCompatActivity {
     private ImageView dog_avatar;
     private ImageView mouse_avatar;
     private ImageView dragon_avatar;
+    private ImageView snake_avatar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_screen_single_player_pig_selected);
+
+        snake_avatar = (ImageView) findViewById(R.id.snake_avatar);
+        snake_avatar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                selectSnake();
+            }
+        });
 
         dragon_avatar = (ImageView) findViewById(R.id.dragon_avatar);
         dragon_avatar.setOnClickListener(new View.OnClickListener() {
@@ -69,6 +79,11 @@ public class HomeScreenSinglePlayerPigSelected extends AppCompatActivity {
 
     public void selectDragon() {
         Intent intent = new Intent(this, HomeScreenSinglePlayerDragonSelected.class);
+        startActivity(intent);
+    }
+
+    public void selectSnake() {
+        Intent intent = new Intent(this, HomeScreenSinglePlayerSnakeSelected.class);
         startActivity(intent);
     }
 }

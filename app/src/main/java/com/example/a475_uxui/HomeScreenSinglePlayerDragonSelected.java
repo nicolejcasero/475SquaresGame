@@ -13,11 +13,20 @@ public class HomeScreenSinglePlayerDragonSelected extends AppCompatActivity {
     private ImageView dog_avatar;
     private ImageView pig_avatar;
     private ImageView mouse_avatar;
+    private ImageView snake_avatar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_screen_single_player_dragon_selected);
+
+        snake_avatar = (ImageView) findViewById(R.id.snake_avatar);
+        snake_avatar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                selectSnake();
+            }
+        });
 
         mouse_avatar = (ImageView) findViewById(R.id.mouse_avatar);
         mouse_avatar.setOnClickListener(new View.OnClickListener() {
@@ -69,6 +78,11 @@ public class HomeScreenSinglePlayerDragonSelected extends AppCompatActivity {
 
     public void selectMouse() {
         Intent intent = new Intent(this, HomeScreenSinglePlayerMouseSelected.class);
+        startActivity(intent);
+    }
+
+    public void selectSnake() {
+        Intent intent = new Intent(this, HomeScreenSinglePlayerSnakeSelected.class);
         startActivity(intent);
     }
 }

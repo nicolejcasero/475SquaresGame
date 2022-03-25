@@ -7,27 +7,18 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 
-public class HomeScreenSinglePlayerChooseCharacter extends AppCompatActivity {
+public class HomeScreenSinglePlayerSnakeSelected extends AppCompatActivity {
 
+    private ImageView start_button;
     private ImageView dog_avatar;
     private ImageView pig_avatar;
     private ImageView mouse_avatar;
     private ImageView dragon_avatar;
-    private ImageView snake_avatar;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_home_screen_single_player_choose_character);
-
-        snake_avatar = (ImageView) findViewById(R.id.snake_avatar);
-        snake_avatar.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                selectSnake();
-            }
-        });
+        setContentView(R.layout.activity_home_screen_single_player_snake_selected);
 
         dragon_avatar = (ImageView) findViewById(R.id.dragon_avatar);
         dragon_avatar.setOnClickListener(new View.OnClickListener() {
@@ -45,6 +36,14 @@ public class HomeScreenSinglePlayerChooseCharacter extends AppCompatActivity {
             }
         });
 
+        dog_avatar = (ImageView) findViewById(R.id.dog_avatar);
+        dog_avatar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                selectDog();
+            }
+        });
+
         pig_avatar = (ImageView) findViewById(R.id.pig_avatar);
         pig_avatar.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -53,13 +52,18 @@ public class HomeScreenSinglePlayerChooseCharacter extends AppCompatActivity {
             }
         });
 
-        dog_avatar = (ImageView) findViewById(R.id.dog_avatar);
-        dog_avatar.setOnClickListener(new View.OnClickListener() {
+        start_button = (ImageView) findViewById(R.id.start_button);
+        start_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                selectDog();
+                openGame();
             }
         });
+    }
+
+    public void openGame() {
+        Intent intent = new Intent(this, GamePage.class);
+        startActivity(intent);
     }
 
     public void selectDog() {
@@ -79,11 +83,6 @@ public class HomeScreenSinglePlayerChooseCharacter extends AppCompatActivity {
 
     public void selectDragon() {
         Intent intent = new Intent(this, HomeScreenSinglePlayerDragonSelected.class);
-        startActivity(intent);
-    }
-
-    public void selectSnake() {
-        Intent intent = new Intent(this, HomeScreenSinglePlayerSnakeSelected.class);
         startActivity(intent);
     }
 }
