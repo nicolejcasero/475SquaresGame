@@ -20,7 +20,7 @@ public class HomeScreenSinglePlayerMouseSelected extends AppCompatActivity {
         setContentView(R.layout.activity_home_screen_single_player_mouse_selected);
 
         dragon_avatar = (ImageView) findViewById(R.id.dragon_avatar);
-        dog_avatar.setOnClickListener(new View.OnClickListener() {
+        dragon_avatar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 selectDragon();
