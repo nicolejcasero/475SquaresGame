@@ -11,6 +11,7 @@
         <entry key="app/src/main/res/layout/activity_home_screen_choose_mode.xml" value="0.218768310546875" />
         <entry key="app/src/main/res/layout/activity_home_screen_single_player_choose_character.xml" value="0.23009796142578143" />
         <entry key="app/src/main/res/layout/activity_home_screen_single_player_dog_selected.xml" value="0.24479166666666666" />
+        <entry key="app/src/main/res/layout/activity_home_screen_single_player_dragon_selected.xml" value="0.24479166666666666" />
         <entry key="app/src/main/res/layout/activity_home_screen_single_player_mouse_selected.xml" value="0.24479166666666666" />
         <entry key="app/src/main/res/layout/activity_home_screen_single_player_pig_selected.xml" value="0.23072916666666668" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.1643835616438356" />
