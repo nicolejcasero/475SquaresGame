@@ -15,11 +15,20 @@ public class HomeScreenSinglePlayerSnakeSelected extends AppCompatActivity {
     private ImageView mouse_avatar;
     private ImageView dragon_avatar;
     private ImageView tiger_avatar;
+    private ImageView multi_player_button;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_screen_single_player_snake_selected);
+
+        multi_player_button = (ImageView) findViewById(R.id.multi_player_button_unselected);
+        multi_player_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openMultiPlayerChooseCharacterPlayerOne();
+            }
+        });
 
         tiger_avatar = (ImageView) findViewById(R.id.tiger_avatar);
         tiger_avatar.setOnClickListener(new View.OnClickListener() {
@@ -97,6 +106,11 @@ public class HomeScreenSinglePlayerSnakeSelected extends AppCompatActivity {
 
     public void selectTiger() {
         Intent intent = new Intent(this, HomeScreenSinglePlayerTigerSelected.class);
+        startActivity(intent);
+    }
+
+    public void openMultiPlayerChooseCharacterPlayerOne() {
+        Intent intent = new Intent(this, HomeScreenMultiPlayerChooseCharacterPlayerOne.class);
         startActivity(intent);
     }
 }
