@@ -7,7 +7,8 @@
     tools:context=".SplashActivity"
     android:layout_centerHorizontal="true"
     android:background="@color/dark_teal"
-    android:gravity="center">
+    android:gravity="center"
+    android:id="@+id/layout">
 
     <ImageView
         android:id="@+id/logo_id"
