@@ -40,6 +40,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:srcCompat="@drawable/pause"
+                android:onClick="onButtonShowPauseWindowClick"
                 android:contentDescription="@string/todo"/>
 
             <ImageButton
@@ -48,11 +49,13 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="16dp"
                 android:background="#00000000"
+                android:contentDescription="@string/todo"
+                android:minWidth="48dp"
+                android:minHeight="48dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/home"
-                android:contentDescription="@string/todo"/>
+                app:srcCompat="@drawable/home" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
