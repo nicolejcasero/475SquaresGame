@@ -22,9 +22,9 @@ public class GameActivity extends AppCompatActivity implements PlayersStateView 
 
 
     protected GameView gameView;
-    protected TextView player1name, player2name, player1state, player2state, player1occupying,
-            player2occupying;
-    ImageView currentPlayerPointer;
+    protected TextView player1occupying,
+            player2occupying, currentPlayerPointer;
+    protected ImageView player1name, player2name;
     Player[] players;
     Integer[] playersOccupying = new Integer[]{0, 0};
     Player currentPlayer;
@@ -37,21 +37,32 @@ public class GameActivity extends AppCompatActivity implements PlayersStateView 
         gameView = (GameView) findViewById(R.id.gameView);
         gameView.setPlayersState(this);
 
-        player1name = (TextView) findViewById(R.id.player1name);
-        player2name = (TextView) findViewById(R.id.player2name);
-        player1state = (TextView) findViewById(R.id.player1state);
-        player2state = (TextView) findViewById(R.id.player2state);
+        player1name = (ImageView) findViewById(R.id.player1name);
+        player2name = (ImageView) findViewById(R.id.player2name);
+//        player1state = (TextView) findViewById(R.id.player1state);
+//        player2state = (TextView) findViewById(R.id.player2state);
         player1occupying = (TextView) findViewById(R.id.player1occupying);
         player2occupying = (TextView) findViewById(R.id.player2occupying);
-     //   currentPlayerPointer = (ImageView) findViewById(R.id.playerNowPointer);
+        currentPlayerPointer = (TextView) findViewById(R.id.playerNowPointer);
 
-        players = new Player[]{new HumanPlayer("Human"), new CPUPlayer("Computer")};
+        players = new Player[]{new HumanPlayer("Player 1"), new CPUPlayer("Player 2")};
         startGame(players);
     }
 
     private void startGame(Player[] players) {
         gameView.startGame(players);
-        updateState();
+
+        Thread pause = new Thread(new Runnable() {
+            @Override
+            public void run() {
+                try {
+                    Thread.sleep(3000);
+                    updateState();
+                } catch (Exception e) {
+                    e.getLocalizedMessage();
+                }
+            }
+        });
     }
 
     public void updateState() {
@@ -59,16 +70,16 @@ public class GameActivity extends AppCompatActivity implements PlayersStateView 
             @Override
             public void run() {
                 if (currentPlayer == players[0]) {
-                    player1state.setText("Thinking");
-                    player2state.setText("Waiting");
-                 //   currentPlayerPointer.setImageResource(R.drawable.a1);
+//                    player1state.setText("Thinking");
+//                    player2state.setText("Waiting");
+                    currentPlayerPointer.setText("YOUR TURN");
                 } else if (currentPlayer == players[1]) {
-                    player2state.setText("Thinking");
-                    player1state.setText("Waiting");
-                   // currentPlayerPointer.setImageResource(R.drawable.a2);
+//                    player2state.setText("Thinking");
+//                    player1state.setText("Waiting");
+                    currentPlayerPointer.setText("THEIR TURN");
                 }
-                player1occupying.setText("Occupying " + playersOccupying[0]);
-                player2occupying.setText("Occupying " + playersOccupying[1]);
+                player1occupying.setText(String.valueOf(playersOccupying[0]));
+                player2occupying.setText(String.valueOf(playersOccupying[1]));
             }
         });
     }
@@ -77,6 +88,17 @@ public class GameActivity extends AppCompatActivity implements PlayersStateView 
     public void setCurrentPlayer(Player player) {
         currentPlayer = player;
         updateState();
+        Thread sleep = new Thread(new Runnable() {
+            @Override
+            public void run() {
+                try {
+                    Thread.sleep(3000);
+                    // Do some stuff
+                } catch (Exception e) {
+                    e.getLocalizedMessage();
+                }
+            }
+        });
     }
 
     @Override
@@ -91,8 +113,8 @@ public class GameActivity extends AppCompatActivity implements PlayersStateView 
         runOnUiThread(new Runnable() {
             @Override
             public void run() {
-                new AlertDialog.Builder(    GameActivity.this)
-                        .setTitle("Dots And Boxes")
+                new AlertDialog.Builder(GameActivity.this)
+                        .setTitle("Squares")
                         .setMessage(winner.getName() + " Wins!")
                         .setPositiveButton("Restart", new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface dialog, int which) {

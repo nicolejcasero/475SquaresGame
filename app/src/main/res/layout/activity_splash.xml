@@ -41,7 +41,7 @@
         android:layout_marginBottom="290dp"
         android:layout_toStartOf="@id/logo_id"
         android:progressBackgroundTint="@color/cool_white"
-        android:progressBackgroundTintMode="add"
+        android:progressBackgroundTintMode="src_over"
         android:progressTint="@color/tanish_pink"
         android:progressTintMode="src_in"
         app:layout_constraintBottom_toBottomOf="parent"

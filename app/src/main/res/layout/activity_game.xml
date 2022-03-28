@@ -102,36 +102,57 @@
             android:gravity="center_vertical"
             android:orientation="vertical">
 
-            <TextView
+            <ImageView
                 android:id="@+id/player1name"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Human"
-                android:textColor="@color/tanish_pink" />
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:src="@drawable/dog_avatar" />
 
-            <TextView
-                android:id="@+id/player1state"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:text="Waiting"
-                android:textColor="@color/tanish_pink" />
+
+<!--            <TextView-->
+<!--                android:id="@+id/player1state"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginTop="5dp"-->
+<!--                android:gravity="center"-->
+<!--                android:text="Waiting"-->
+<!--                android:textColor="@color/tanish_pink" />-->
 
             <TextView
                 android:id="@+id/player1occupying"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
-                android:text="Occupying 0"
+                android:layout_marginBottom="0dp"
+                android:gravity="center"
+                android:textSize="30sp"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:text="0"
                 android:textColor="@color/tanish_pink" />
         </LinearLayout>
 
-        <ImageView
+<!--        <ImageView-->
+<!--            android:id="@+id/playerNowPointer"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="100dp"-->
+<!--            android:layout_weight="1"-->
+<!--            android:src="@drawable/a1" />-->
+
+        <TextView
             android:id="@+id/playerNowPointer"
-            android:layout_width="0dp"
+            android:layout_width="200dp"
             android:layout_height="100dp"
-            android:layout_weight="1"
-            android:src="@drawable/a1" />
+            android:layout_marginTop="15dp"
+            android:gravity="center"
+            android:textSize="32sp"
+            android:shadowColor="@color/grey"
+            android:shadowDx="2"
+            android:shadowDy="6"
+            android:shadowRadius="7"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:text="YOUR TURN"
+            android:textColor="@color/blush_pink" />
 
         <LinearLayout
             android:layout_width="0dp"
@@ -140,30 +161,31 @@
             android:gravity="center_vertical"
             android:orientation="vertical">
 
-            <TextView
+            <ImageView
                 android:id="@+id/player2name"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="end"
-                android:text="Computer"
-                android:textColor="@color/dark_teal" />
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:src="@drawable/dragon_avatar" />
 
-            <TextView
-                android:id="@+id/player2state"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:gravity="end"
-                android:text="Waiting"
-                android:textColor="@color/dark_teal" />
+<!--            <TextView-->
+<!--                android:id="@+id/player2state"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginTop="5dp"-->
+<!--                android:gravity="center"-->
+<!--                android:text="Waiting"-->
+<!--                android:textColor="@color/dark_teal" />-->
 
             <TextView
                 android:id="@+id/player2occupying"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
-                android:gravity="end"
-                android:text="Occupying 0"
+                android:gravity="center"
+                android:textSize="30sp"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:text="0"
                 android:textColor="@color/dark_teal" />
         </LinearLayout>
     </LinearLayout>
@@ -172,6 +194,10 @@
     <com.example.a475_uxui.gameplay.gameview.GameView
         android:id="@+id/gameView"
         android:layout_width="match_parent"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="30dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
         android:layout_height="0dp"
         android:layout_weight="1"
         app:layout_constraintBottom_toBottomOf="parent"
