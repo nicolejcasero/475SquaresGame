@@ -90,9 +90,9 @@ public class GameView extends View implements Observer {
         for (int i = 0; i < game.getHeight() + 1; i++) {
             for (int j = 0; j < game.getWidth(); j++) {
                 Line horizontal = new Line(Direction.HORIZONTAL, i, j);
-                //sets color for CPU or player 2
+                //sets color for CPU or player 2 to light teal then after next turn turns to dark teal
                 if (horizontal.equals(game.getLatestLine())) {
-                    paint.setColor(getResources().getColor(R.color.dark_teal));
+                    paint.setColor(getResources().getColor(R.color.light_teal));
                 } else if (game.isLineOccupied(horizontal)) {
                     if (game.getLineOccupier(horizontal) == 1)
                         paint.setColor(playerColors[0]);
@@ -108,7 +108,7 @@ public class GameView extends View implements Observer {
                 Line vertical = new Line(Direction.VERTICAL, j, i);
                 //sets color for CPU or player 2
                 if (vertical.equals(game.getLatestLine())) {
-                    paint.setColor(getResources().getColor(R.color.dark_teal));
+                    paint.setColor(getResources().getColor(R.color.light_teal));
                 } else if (game.isLineOccupied(vertical)) {
                     if (game.getLineOccupier(vertical) == 1)
                         paint.setColor(playerColors[0]);
