@@ -51,7 +51,7 @@ public class GameActivity extends AppCompatActivity implements PlayersStateView 
         player2occupying = (TextView) findViewById(R.id.player2occupying);
         currentPlayerPointer = (TextView) findViewById(R.id.playerNowPointer);
 
-        players = new Player[]{new HumanPlayer("Player 1"), new CPUPlayer("Player 2")};
+        players = new Player[]{new HumanPlayer("Player 1"), new CPUPlayer("CPU")};
         startGame(players);
     }
 
