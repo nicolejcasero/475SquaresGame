@@ -26,4 +26,5 @@
     <string name="logo">LOGO</string>
     <string name="player_1_choose_your_avatar">Player 1, choose your avatar.</string>
     <string name="player_2_choose_your_avatar">Player 2, choose your avatar.</string>
+    <string name="player_2_dragon">Player 2: Dragon</string>
 </resources>
