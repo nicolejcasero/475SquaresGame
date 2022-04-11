@@ -101,9 +101,9 @@ public class GameView extends View implements Observer {
                 } else {
                     paint.setColor(getResources().getColor(R.color.white));
                 }
+                float right = start + add5 * i + add1 - add2;
                 canvas.drawRect(start + add5 * j + add1, start + add5 * i
-                        + add2, start + add5 * (j + 1), start + add5 * i + add1
-                        - add2, paint);
+                        + add2, start + add5 * (j + 1), right, paint);
 
                 Line vertical = new Line(Direction.VERTICAL, j, i);
                 //sets color for CPU or player 2
@@ -117,20 +117,23 @@ public class GameView extends View implements Observer {
                 } else {
                     paint.setColor(getResources().getColor(R.color.white));
                 }
-                canvas.drawRect(start + add5 * i + add2, start + add5 * j
-                        + add1, start + add5 * i + add1 - add2, start + add5
-                        * (j + 1), paint);
+                canvas.drawRect(start + add5 * i + add2, start + add5 * j + add1, right, start + add5 * (j + 1), paint);
             }
         }
 
         //paint boxes
         for (int i = 0; i < game.getWidth(); i++) {
             for (int j = 0; j < game.getHeight(); j++) {
-                paint.setColor(game.getBoxOccupier(j, i) == null ? Color.TRANSPARENT : playerColors[Player.indexIn(game.getBoxOccupier(j, i), game.getPlayers())]);
-                canvas.drawRect(start + add5 * i + add1 + add2, start
-                        + add5 * j + add1 + add2, start + add5 * i + add1
-                        + add4 - add2, start + add5 * j + add1 + add4
-                        - add2, paint);
+                //paint.setColor(game.getBoxOccupier(j, i) == null ? Color.TRANSPARENT : playerColors[Player.indexIn(game.getBoxOccupier(j, i), game.getPlayers())]);
+
+                if (game.getBoxOccupier(j, i) == null) {
+                    paint.setColor(Color.TRANSPARENT);
+                }
+                else {
+                    paint.setColor(playerColors[Player.indexIn(game.getBoxOccupier(j, i), game.getPlayers())]);
+                }
+                canvas.drawRect(start + add5 * i + add1 + add2, start + add5 * j + add1 + add2,
+                        start + add5 * i + add1 + add4 - add2, start + add5 * j + add1 + add4 - add2, paint);
             }
         }
 
@@ -161,18 +164,14 @@ public class GameView extends View implements Observer {
         int d = -1, a = -1, b = -1;
         for (int i = 0; i < 6; i++) {
             for (int j = 0; j < 5; j++) {
-                if ((start + add5 * j + add1 - add3) <= touchX
-                        && touchX <= (start + add5 * (j + 1) + add3)
-                        && touchY >= start + add5 * i + add2 - add3
-                        && touchY <= start + add5 * i + add1 - add2 + add3) {
+                if ((start + add5 * j + add1 - add3) <= touchX && touchX <= (start + add5 * (j + 1) + add3)
+                        && touchY >= start + add5 * i + add2 - add3 && touchY <= start + add5 * i + add1 - add2 + add3) {
                     d = 0;
                     a = i;
                     b = j;
                 }
-                if (start + add5 * i + add2 - add3 <= touchX
-                        && touchX <= start + add5 * i + add1 - add2 + add3
-                        && touchY >= start + add5 * j + add1 - add3
-                        && touchY <= start + add5 * (j + 1) + add3) {
+                if (start + add5 * i + add2 - add3 <= touchX && touchX <= start + add5 * i + add1 - add2 + add3
+                        && touchY >= start + add5 * j + add1 - add3 && touchY <= start + add5 * (j + 1) + add3) {
                     d = 1;
                     a = j;
                     b = i;
