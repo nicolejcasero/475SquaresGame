@@ -26,4 +26,12 @@
     <string name="logo">LOGO</string>
     <string name="player_1_choose_your_avatar">Player 1, choose your avatar.</string>
     <string name="player_2_choose_your_avatar">Player 2, choose your avatar.</string>
+    <string name="player_2_dragon">Player 2: Dragon</string>
+    <string name="player_1_dog">Player 1: Dog</string>
+    <string name="avatar_snake">Avatar: Snake</string>
+    <string name="avatar_tiger">Avatar: Tiger</string>
+    <string name="avatar_pig">Avatar: Pig</string>
+    <string name="avatar_mouse">Avatar: Mouse</string>
+    <string name="avatar_dragon">Avatar: Dragon</string>
+    <string name="avatar_dog">Avatar: Dog</string>
 </resources>

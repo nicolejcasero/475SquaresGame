@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/light_turquoise"
-    tools:context=".HomeScreenSinglePlayerMouseSelected">
+    tools:context=".HomeScreenMultiPlayerDragonSelectedPlayerTwo">
 
     <ImageView
         android:id="@+id/imageView"
@@ -45,21 +45,21 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <ImageView
-        android:id="@+id/multi_player_button_unselected"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
+        android:id="@+id/multi_player_button_selected"
+        android:layout_width="152dp"
+        android:layout_height="99dp"
+        android:layout_marginTop="18dp"
         android:layout_marginEnd="40dp"
         android:layout_marginBottom="435dp"
         android:contentDescription="@string/todo"
-        android:src="@drawable/multiplayer_button_unselected"
+        android:src="@drawable/multiplayer_button_selected"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/choose_mode_textview"
         app:layout_constraintVertical_bias="0.0" />
 
     <ImageView
-        android:id="@+id/single_player_button_selected"
+        android:id="@+id/single_player_button_unselected"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
@@ -68,15 +68,15 @@
         android:layout_marginBottom="435dp"
         android:contentDescription="@string/todo"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/multi_player_button_unselected"
+        app:layout_constraintEnd_toStartOf="@+id/multi_player_button_selected"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/choose_mode_textview"
         app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/single_player_button_selected" />
+        app:srcCompat="@drawable/single_player_button_unselected" />
 
     <ImageView
-        android:id="@+id/mouse_avatar_selected"
+        android:id="@+id/mouse_avatar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
@@ -86,7 +86,7 @@
         app:layout_constraintHorizontal_bias="0.874"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/choose_avatar_textview"
-        app:srcCompat="@drawable/mouse_avatar_selected" />
+        app:srcCompat="@drawable/mouse_avatar" />
 
     <ImageView
         android:id="@+id/pig_avatar"
@@ -106,37 +106,37 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:layout_marginBottom="24dp"
-        android:text="@string/avatar_mouse"
+        android:text="@string/player_2_dragon"
         android:textAlignment="center"
         android:textAllCaps="false"
         android:textColor="@color/white"
         android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/mouse_avatar_selected"
+        app:layout_constraintBottom_toTopOf="@+id/mouse_avatar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/multi_player_button_unselected" />
+        app:layout_constraintTop_toBottomOf="@+id/multi_player_button_selected" />
 
     <ImageView
-        android:id="@+id/dog_avatar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/dog_avatar_taken_multi_player"
+        android:layout_width="96dp"
+        android:layout_height="93dp"
         android:layout_marginStart="40dp"
         android:layout_marginTop="24dp"
         android:contentDescription="@string/todo"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/choose_avatar_textview"
-        app:srcCompat="@drawable/dog_avatar" />
+        app:srcCompat="@drawable/dog_avatar_taken_multi_player" />
 
     <ImageView
-        android:id="@+id/dragon_avatar"
+        android:id="@+id/dragon_avatar_selected"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
         android:layout_marginTop="24dp"
         android:contentDescription="@string/todo"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/dog_avatar"
-        app:srcCompat="@drawable/dragon_avatar" />
+        app:layout_constraintTop_toBottomOf="@+id/dog_avatar_taken_multi_player"
+        app:srcCompat="@drawable/dragon_avatar_selected" />
 
     <ImageView
         android:id="@+id/snake_avatar"
@@ -158,7 +158,7 @@
         android:layout_marginEnd="40dp"
         android:contentDescription="@string/todo"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/mouse_avatar_selected"
+        app:layout_constraintTop_toBottomOf="@+id/mouse_avatar"
         app:srcCompat="@drawable/tiger_avatar" />
 
     <ImageView

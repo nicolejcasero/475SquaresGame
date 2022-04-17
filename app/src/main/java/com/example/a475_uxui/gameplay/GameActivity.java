@@ -11,9 +11,15 @@ import com.example.a475_uxui.gameplay.singleplayer.CPUPlayer;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.os.Bundle;
+import android.view.Gravity;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.MotionEvent;
+import android.view.View;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.PopupWindow;
 import android.widget.TextView;
 
 import java.util.Map;
@@ -45,7 +51,7 @@ public class GameActivity extends AppCompatActivity implements PlayersStateView 
         player2occupying = (TextView) findViewById(R.id.player2occupying);
         currentPlayerPointer = (TextView) findViewById(R.id.playerNowPointer);
 
-        players = new Player[]{new HumanPlayer("Player 1"), new CPUPlayer("Player 2")};
+        players = new Player[]{new HumanPlayer("Player 1"), new CPUPlayer("CPU")};
         startGame(players);
     }
 
@@ -126,6 +132,25 @@ public class GameActivity extends AppCompatActivity implements PlayersStateView 
                             public void onClick(DialogInterface dialogInterface, int i) {
                             }
                         }).show();
+            }
+        });
+    }
+    public void onButtonShowPauseWindowClick(View view) {
+        LayoutInflater inflater = (LayoutInflater)
+                getSystemService(LAYOUT_INFLATER_SERVICE);
+        View pauseView = inflater.inflate(R.layout.pause_popup, null);
+
+        int width = LinearLayout.LayoutParams.WRAP_CONTENT;
+        int height = LinearLayout.LayoutParams.WRAP_CONTENT;
+        boolean focusable = true;
+        final PopupWindow pauseWindow = new PopupWindow(pauseView, width, height, focusable);
+
+        pauseWindow.showAtLocation(view, Gravity.CENTER, 0, 0);
+        pauseView.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View view, MotionEvent motionEvent) {
+                pauseWindow.dismiss();
+                return true;
             }
         });
     }
