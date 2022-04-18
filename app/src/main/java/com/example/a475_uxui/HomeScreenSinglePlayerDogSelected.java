@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.ImageView;
 
 import com.example.a475_uxui.gameplay.GameActivity;
+import com.example.a475_uxui.gameplay.GameActivityMulti;
 
 public class HomeScreenSinglePlayerDogSelected extends AppCompatActivity {
 
@@ -82,7 +83,8 @@ public class HomeScreenSinglePlayerDogSelected extends AppCompatActivity {
     }
 
     public void openGame() {
-        Intent intent = new Intent(this, GameActivity.class);
+        //TESTING MULTIPLAYER, BUT EVENTUALLY MOVE TO A DIFFERENT FILE
+        Intent intent = new Intent(this, GameActivityMulti.class);
         startActivity(intent);
     }
 

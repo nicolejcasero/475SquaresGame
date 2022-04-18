@@ -24,12 +24,11 @@ import android.widget.TextView;
 
 import java.util.Map;
 
-public class GameActivity extends AppCompatActivity implements PlayersStateView {
+public class GameActivityMulti extends AppCompatActivity implements PlayersStateView {
 
 
     protected GameView gameView;
-    protected TextView player1occupying,
-            player2occupying, currentPlayerPointer;
+    protected TextView player1occupying, player2occupying, currentPlayerPointer;
     protected ImageView player1name, player2name;
     Player[] players;
     Integer[] playersOccupying = new Integer[]{0, 0};
@@ -45,20 +44,17 @@ public class GameActivity extends AppCompatActivity implements PlayersStateView 
 
         player1name = (ImageView) findViewById(R.id.player1name);
         player2name = (ImageView) findViewById(R.id.player2name);
-//        player1state = (TextView) findViewById(R.id.player1state);
-//        player2state = (TextView) findViewById(R.id.player2state);
         player1occupying = (TextView) findViewById(R.id.player1occupying);
         player2occupying = (TextView) findViewById(R.id.player2occupying);
         currentPlayerPointer = (TextView) findViewById(R.id.playerNowPointer);
 
-        players = new Player[]{new HumanPlayer("Player 1"), new CPUPlayer("CPU")};
+        players = new Player[]{new HumanPlayer("Player 1"), new HumanPlayer("Player 2")};
         startGame(players);
     }
 
     private void startGame(Player[] players) {
         gameView.startGame(players);
         updateState();
-
     }
 
     public void updateState() {
@@ -98,7 +94,7 @@ public class GameActivity extends AppCompatActivity implements PlayersStateView 
         runOnUiThread(new Runnable() {
             @Override
             public void run() {
-                new AlertDialog.Builder(GameActivity.this)
+                new AlertDialog.Builder(GameActivityMulti.this)
                         .setTitle("Squares")
                         .setMessage(winner.getName() + " Wins!")
                         .setPositiveButton("Restart", new DialogInterface.OnClickListener() {

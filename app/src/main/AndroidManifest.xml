@@ -16,6 +16,9 @@
             android:name=".gameplay.GameActivity"
             android:exported="false" />
         <activity
+            android:name=".gameplay.GameActivityMulti"
+            android:exported="false" />
+        <activity
             android:name=".HomeScreenMultiPlayerChooseCharacterPlayerTwo"
             android:exported="false" />
         <activity
