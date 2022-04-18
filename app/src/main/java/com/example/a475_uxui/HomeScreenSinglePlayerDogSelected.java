@@ -84,7 +84,8 @@ public class HomeScreenSinglePlayerDogSelected extends AppCompatActivity {
 
     public void openGame() {
         //TESTING MULTIPLAYER, BUT EVENTUALLY MOVE TO A DIFFERENT FILE
-        Intent intent = new Intent(this, GameActivityMulti.class);
+        Intent intent = new Intent(this, GameActivity.class);
+        intent.putExtra("resId", R.drawable.dog_avatar);
         startActivity(intent);
     }
 

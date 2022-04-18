@@ -43,6 +43,13 @@ public class GameActivityMulti extends AppCompatActivity implements PlayersState
         gameView.setPlayersState(this);
 
         player1name = (ImageView) findViewById(R.id.player1name);
+//        player1name.setImageResource(R.drawable.dragon_avatar); //set image
+        Bundle bundle = getIntent().getExtras();
+        if (bundle != null) {
+            int resId = bundle.getInt("resId");
+            player1name.setImageResource(resId);
+        }
+
         player2name = (ImageView) findViewById(R.id.player2name);
         player1occupying = (TextView) findViewById(R.id.player1occupying);
         player2occupying = (TextView) findViewById(R.id.player2occupying);

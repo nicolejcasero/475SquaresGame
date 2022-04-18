@@ -44,6 +44,11 @@ public class GameActivity extends AppCompatActivity implements PlayersStateView 
         gameView.setPlayersState(this);
 
         player1name = (ImageView) findViewById(R.id.player1name);
+        Bundle bundle = getIntent().getExtras();
+        if (bundle != null) {
+            int resId = bundle.getInt("resId");
+            player1name.setImageResource(resId);
+        }
         player2name = (ImageView) findViewById(R.id.player2name);
 //        player1state = (TextView) findViewById(R.id.player1state);
 //        player2state = (TextView) findViewById(R.id.player2state);
