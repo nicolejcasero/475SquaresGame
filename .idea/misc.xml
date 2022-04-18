@@ -5,9 +5,10 @@
       <map>
         <entry key="../../../../layout/custom_preview.xml" value="0.33645833333333336" />
         <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.18" />
-        <entry key="app/src/main/res/layout/activity_game.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_game.xml" value="0.2693069458007813" />
         <entry key="app/src/main/res/layout/activity_game_page.xml" value="0.302536231884058" />
         <entry key="app/src/main/res/layout/activity_home_screen.xml" value="0.12952898550724637" />
+        <entry key="app/src/main/res/layout/activity_home_screen_choose_mode.xml" value="0.18357086181640622" />
         <entry key="app/src/main/res/layout/activity_home_screen_multi_player_choose_character_player_one.xml" value="0.24583333333333332" />
         <entry key="app/src/main/res/layout/activity_home_screen_multi_player_choose_character_player_two.xml" value="0.24583333333333332" />
         <entry key="app/src/main/res/layout/activity_home_screen_multi_player_dog_selected_player_one.xml" value="0.24583333333333332" />

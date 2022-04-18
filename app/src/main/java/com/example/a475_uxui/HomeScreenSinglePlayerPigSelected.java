@@ -7,6 +7,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 
+import com.example.a475_uxui.gameplay.GameActivity;
+
 public class HomeScreenSinglePlayerPigSelected extends AppCompatActivity {
 
     private ImageView start_button;
@@ -80,7 +82,8 @@ public class HomeScreenSinglePlayerPigSelected extends AppCompatActivity {
     }
 
     public void openGame() {
-        Intent intent = new Intent(this, GamePage.class);
+        Intent intent = new Intent(this, GameActivity.class);
+        intent.putExtra("resId", R.drawable.pig_avatar);
         startActivity(intent);
     }
 
