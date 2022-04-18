@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.ImageView;
 
 import com.example.a475_uxui.gameplay.GameActivity;
+import com.example.a475_uxui.gameplay.GameActivityMulti;
 
 public class HomeScreenMultiPlayerDragonSelectedPlayerTwo extends AppCompatActivity {
 
@@ -48,7 +49,7 @@ public class HomeScreenMultiPlayerDragonSelectedPlayerTwo extends AppCompatActiv
     }
 
     public void openGame() {
-        Intent intent = new Intent(this, GameActivity.class);
+        Intent intent = new Intent(this, GameActivityMulti.class);
         startActivity(intent);
     }
 
