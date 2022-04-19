@@ -1,4 +1,4 @@
-package com.example.a475_uxui;
+package homescreen;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -7,14 +7,15 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 
+import com.example.a475_uxui.R;
 import com.example.a475_uxui.gameplay.GameActivity;
 
-public class HomeScreenSinglePlayerDragonSelected extends AppCompatActivity {
+public class HomeScreenSinglePlayerMouseSelected extends AppCompatActivity {
 
     private ImageView start_button;
     private ImageView dog_avatar;
     private ImageView pig_avatar;
-    private ImageView mouse_avatar;
+    private ImageView dragon_avatar;
     private ImageView snake_avatar;
     private ImageView tiger_avatar;
     private ImageView multi_player_button;
@@ -22,7 +23,7 @@ public class HomeScreenSinglePlayerDragonSelected extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_home_screen_single_player_dragon_selected);
+        setContentView(R.layout.activity_home_screen_single_player_mouse_selected);
 
         multi_player_button = (ImageView) findViewById(R.id.multi_player_button_unselected);
         multi_player_button.setOnClickListener(new View.OnClickListener() {
@@ -48,11 +49,11 @@ public class HomeScreenSinglePlayerDragonSelected extends AppCompatActivity {
             }
         });
 
-        mouse_avatar = (ImageView) findViewById(R.id.mouse_avatar);
-        mouse_avatar.setOnClickListener(new View.OnClickListener() {
+        dragon_avatar = (ImageView) findViewById(R.id.dragon_avatar);
+        dragon_avatar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                selectMouse();
+                selectDragon();
             }
         });
 
@@ -83,7 +84,7 @@ public class HomeScreenSinglePlayerDragonSelected extends AppCompatActivity {
 
     public void openGame() {
         Intent intent = new Intent(this, GameActivity.class);
-        intent.putExtra("resId", R.drawable.dragon_avatar);
+        intent.putExtra("resId", R.drawable.mouse_avatar);
         startActivity(intent);
     }
 
@@ -97,8 +98,8 @@ public class HomeScreenSinglePlayerDragonSelected extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void selectMouse() {
-        Intent intent = new Intent(this, HomeScreenSinglePlayerMouseSelected.class);
+    public void selectDragon() {
+        Intent intent = new Intent(this, HomeScreenSinglePlayerDragonSelected.class);
         startActivity(intent);
     }
 

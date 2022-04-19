@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.475UXUI">
         <activity
-            android:name=".HomeScreenMultiPlayerDragonSelectedPlayerTwo"
+            android:name="homescreen.HomeScreenMultiPlayerDragonSelectedPlayerTwo"
             android:exported="false" />
         <activity
             android:name=".gameplay.GameActivity"
@@ -19,36 +19,36 @@
             android:name=".gameplay.GameActivityMulti"
             android:exported="false" />
         <activity
-            android:name=".HomeScreenMultiPlayerChooseCharacterPlayerTwo"
+            android:name="homescreen.HomeScreenMultiPlayerChooseCharacterPlayerTwo"
             android:exported="false" />
         <activity
-            android:name=".HomeScreenMultiPlayerDogSelectedPlayerOne"
+            android:name="homescreen.HomeScreenMultiPlayerDogSelectedPlayerOne"
             android:exported="false" />
         <activity
-            android:name=".HomeScreenMultiPlayerChooseCharacterPlayerOne"
+            android:name="homescreen.HomeScreenMultiPlayerChooseCharacterPlayerOne"
             android:exported="false" />
         <activity
-            android:name=".HomeScreenSinglePlayerTigerSelected"
+            android:name="homescreen.HomeScreenSinglePlayerTigerSelected"
             android:exported="false" />
         <activity
-            android:name=".HomeScreenSinglePlayerSnakeSelected"
+            android:name="homescreen.HomeScreenSinglePlayerSnakeSelected"
             android:exported="false" />
         <activity
-            android:name=".HomeScreenSinglePlayerDragonSelected"
+            android:name="homescreen.HomeScreenSinglePlayerDragonSelected"
             android:exported="false" />
         <activity
-            android:name=".HomeScreenSinglePlayerMouseSelected"
+            android:name="homescreen.HomeScreenSinglePlayerMouseSelected"
             android:exported="false" />
         <activity
-            android:name=".HomeScreenSinglePlayerPigSelected"
+            android:name="homescreen.HomeScreenSinglePlayerPigSelected"
             android:exported="false" />
         <activity
-            android:name=".HomeScreenSinglePlayerDogSelected"
+            android:name="homescreen.HomeScreenSinglePlayerDogSelected"
             android:exported="false" />
         <activity
-            android:name=".HomeScreenSinglePlayerChooseCharacter"
+            android:name="homescreen.HomeScreenSinglePlayerChooseCharacter"
             android:exported="false" />
-        <activity android:name=".HomeScreenChooseMode" />
+        <activity android:name="homescreen.HomeScreenChooseMode" />
         <activity
             android:name=".SplashActivity"
             android:exported="true">

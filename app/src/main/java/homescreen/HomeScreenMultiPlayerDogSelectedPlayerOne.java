@@ -1,4 +1,4 @@
-package com.example.a475_uxui;
+package homescreen;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -6,6 +6,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
+
+import com.example.a475_uxui.R;
 
 public class HomeScreenMultiPlayerDogSelectedPlayerOne extends AppCompatActivity {
 

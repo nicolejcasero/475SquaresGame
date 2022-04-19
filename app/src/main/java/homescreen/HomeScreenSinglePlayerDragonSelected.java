@@ -1,4 +1,4 @@
-package com.example.a475_uxui;
+package homescreen;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -7,15 +7,15 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 
+import com.example.a475_uxui.R;
 import com.example.a475_uxui.gameplay.GameActivity;
-import com.example.a475_uxui.gameplay.GameActivityMulti;
 
-public class HomeScreenSinglePlayerDogSelected extends AppCompatActivity {
+public class HomeScreenSinglePlayerDragonSelected extends AppCompatActivity {
 
     private ImageView start_button;
+    private ImageView dog_avatar;
     private ImageView pig_avatar;
     private ImageView mouse_avatar;
-    private ImageView dragon_avatar;
     private ImageView snake_avatar;
     private ImageView tiger_avatar;
     private ImageView multi_player_button;
@@ -23,7 +23,7 @@ public class HomeScreenSinglePlayerDogSelected extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_home_screen_single_player_dog_selected);
+        setContentView(R.layout.activity_home_screen_single_player_dragon_selected);
 
         multi_player_button = (ImageView) findViewById(R.id.multi_player_button_unselected);
         multi_player_button.setOnClickListener(new View.OnClickListener() {
@@ -49,11 +49,19 @@ public class HomeScreenSinglePlayerDogSelected extends AppCompatActivity {
             }
         });
 
-        dragon_avatar = (ImageView) findViewById(R.id.dragon_avatar);
-        dragon_avatar.setOnClickListener(new View.OnClickListener() {
+        mouse_avatar = (ImageView) findViewById(R.id.mouse_avatar);
+        mouse_avatar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                selectDragon();
+                selectMouse();
+            }
+        });
+
+        dog_avatar = (ImageView) findViewById(R.id.dog_avatar);
+        dog_avatar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                selectDog();
             }
         });
 
@@ -62,14 +70,6 @@ public class HomeScreenSinglePlayerDogSelected extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 selectPig();
-            }
-        });
-
-        mouse_avatar = (ImageView) findViewById(R.id.mouse_avatar);
-        mouse_avatar.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                selectMouse();
             }
         });
 
@@ -83,9 +83,13 @@ public class HomeScreenSinglePlayerDogSelected extends AppCompatActivity {
     }
 
     public void openGame() {
-        //TESTING MULTIPLAYER, BUT EVENTUALLY MOVE TO A DIFFERENT FILE
         Intent intent = new Intent(this, GameActivity.class);
-        intent.putExtra("resId", R.drawable.dog_avatar);
+        intent.putExtra("resId", R.drawable.dragon_avatar);
+        startActivity(intent);
+    }
+
+    public void selectDog() {
+        Intent intent = new Intent(this, HomeScreenSinglePlayerDogSelected.class);
         startActivity(intent);
     }
 
@@ -96,11 +100,6 @@ public class HomeScreenSinglePlayerDogSelected extends AppCompatActivity {
 
     public void selectMouse() {
         Intent intent = new Intent(this, HomeScreenSinglePlayerMouseSelected.class);
-        startActivity(intent);
-    }
-
-    public void selectDragon() {
-        Intent intent = new Intent(this, HomeScreenSinglePlayerDragonSelected.class);
         startActivity(intent);
     }
 
