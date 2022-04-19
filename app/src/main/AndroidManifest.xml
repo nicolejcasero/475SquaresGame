@@ -48,7 +48,6 @@
         <activity
             android:name=".HomeScreenSinglePlayerChooseCharacter"
             android:exported="false" />
-        <activity android:name=".GamePage" />
         <activity android:name=".HomeScreenChooseMode" />
         <activity
             android:name=".SplashActivity"
