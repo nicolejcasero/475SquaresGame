@@ -10,6 +10,7 @@ import com.example.a475_uxui.gameplay.singleplayer.CPUPlayer;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.LayoutInflater;
@@ -18,6 +19,7 @@ import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.PopupWindow;
@@ -25,12 +27,15 @@ import android.widget.TextView;
 
 import java.util.Map;
 
+import homescreen.HomeScreenChooseMode;
+
 public class GameActivity extends AppCompatActivity implements PlayersStateView {
 
 
     protected GameView gameView;
     protected TextView player1occupying, player2occupying, currentPlayerPointer;
     protected ImageView player1name, player2name;
+    ImageButton homeButton;
     Player[] players;
     Integer[] playersOccupying = new Integer[]{0, 0};
     Player currentPlayer;
@@ -57,9 +62,24 @@ public class GameActivity extends AppCompatActivity implements PlayersStateView 
         player2occupying = (TextView) findViewById(R.id.player2occupying);
         currentPlayerPointer = (TextView) findViewById(R.id.playerNowPointer);
 
+        homeButton = (ImageButton) findViewById(R.id.homeButton);
+        homeButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openHomeScreen();
+            }
+        });
+
+
         players = new Player[]{new HumanPlayer("Player 1"), new CPUPlayer("CPU")};
         startGame(players);
 
+
+    }
+
+    public void openHomeScreen() {
+        Intent intent = new Intent(this, HomeScreenChooseMode.class);
+        startActivity(intent);
     }
 
     private void startGame(Player[] players) {

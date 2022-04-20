@@ -11,6 +11,7 @@ import com.example.a475_uxui.gameplay.singleplayer.CPUPlayer;
 import android.annotation.SuppressLint;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.LayoutInflater;
@@ -18,6 +19,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.View;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.PopupWindow;
@@ -25,12 +27,15 @@ import android.widget.TextView;
 
 import java.util.Map;
 
+import homescreen.HomeScreenChooseMode;
+
 public class GameActivityMulti extends AppCompatActivity implements PlayersStateView {
 
 
     protected GameView gameView;
     protected TextView player1occupying, player2occupying, currentPlayerPointer;
     protected ImageView player1name, player2name;
+    ImageButton homeButton;
     Player[] players;
     Integer[] playersOccupying = new Integer[]{0, 0};
     Player currentPlayer;
@@ -56,8 +61,21 @@ public class GameActivityMulti extends AppCompatActivity implements PlayersState
         player2occupying = (TextView) findViewById(R.id.player2occupying);
         currentPlayerPointer = (TextView) findViewById(R.id.playerNowPointer);
 
+        homeButton = (ImageButton) findViewById(R.id.homeButton);
+        homeButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openHomeScreen();
+            }
+        });
+
         players = new Player[]{new HumanPlayer("Player 1"), new HumanPlayer("Player 2")};
         startGame(players);
+    }
+
+    public void openHomeScreen() {
+        Intent intent = new Intent(this, HomeScreenChooseMode.class);
+        startActivity(intent);
     }
 
     private void startGame(Player[] players) {
@@ -71,12 +89,8 @@ public class GameActivityMulti extends AppCompatActivity implements PlayersState
             @Override
             public void run() {
                 if (currentPlayer == players[0]) {
-//                    player1state.setText("Thinking");
-//                    player2state.setText("Waiting");
                     currentPlayerPointer.setText("PLAYER 1 TURN");
                 } else if (currentPlayer == players[1]) {
-//                    player2state.setText("Thinking");
-//                    player1state.setText("Waiting");
                     currentPlayerPointer.setText("PLAYER 2 TURN");
                 }
                 player1occupying.setText(String.valueOf(playersOccupying[0]));
