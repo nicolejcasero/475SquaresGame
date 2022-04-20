@@ -1,28 +1,79 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background= "#006D77">
 
+    <View
+        android:id="@+id/colored_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="70dp"
+        android:layout_gravity="center"
+        android:background="@color/tanish_pink"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints" />
+
     <TextView
+        android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="30dp"
+        android:layout_margin="10dp"
+        android:fontFamily="@font/josefin_sans"
+        android:text="    • Connect dots horizontally or \n       vertically to close a square.\n    • To link two dots, touch line in \n       between.\n    • When the fourth segment of a \n       square is drawn by a player, that \n       square is theirs and will be filled \n       with their color.\n    • You will alternate turns with your \n       opponent, BUT if a player gains a \n       square, they can continue playing.\n    • When there are no more dots to \n       connect, the game is over and the \n       player with the most squares wins!\n    • Each square filled is worth one \n       point."
         android:textSize="22sp"
-        android:text= "~Connect dots horizontally or vertically to close a square.
-
-                                               ~To link two dots, touch space in between.
-
-                                                  ~When fourth segment of a 1x1 square is drawn by a player, that square is theirs and will be filled with their color.
-
-                                                           ~You will alternate turns with your opponent, BUT if a player gains a square, they can continue playing.
-
-                   ~When there are no more dots to connect, the game is over and the player with the most squares wins!
-
-                               ~Each square gained is worth one point."
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.507"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        app:layout_constraintVertical_bias="0.0"
         tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:letterSpacing="0.1"
+        android:text="PAUSE"
+        android:textSize="40sp"
+        android:fontFamily="@font/josefin_sans"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/josefin_sans"
+        android:text="How to Play"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.34"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/colored_bar" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/textView3"
+        app:layout_constraintEnd_toStartOf="@+id/textView2"
+        app:layout_constraintHorizontal_bias="0.461"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/colored_bar"
+        app:layout_constraintVertical_bias="0.526"
+        app:srcCompat="@drawable/help_button" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
