@@ -8,6 +8,7 @@ import com.example.a475_uxui.gameplay.model.HumanPlayer;
 import com.example.a475_uxui.gameplay.model.Player;
 import com.example.a475_uxui.gameplay.singleplayer.CPUPlayer;
 
+import android.annotation.SuppressLint;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.os.Bundle;
@@ -66,16 +67,17 @@ public class GameActivityMulti extends AppCompatActivity implements PlayersState
 
     public void updateState() {
         runOnUiThread(new Runnable() {
+            @SuppressLint("SetTextI18n")
             @Override
             public void run() {
                 if (currentPlayer == players[0]) {
 //                    player1state.setText("Thinking");
 //                    player2state.setText("Waiting");
-                    currentPlayerPointer.setText("YOUR TURN");
+                    currentPlayerPointer.setText("PLAYER 1 TURN");
                 } else if (currentPlayer == players[1]) {
 //                    player2state.setText("Thinking");
 //                    player1state.setText("Waiting");
-                    currentPlayerPointer.setText("THEIR TURN");
+                    currentPlayerPointer.setText("PLAYER 2 TURN");
                 }
                 player1occupying.setText(String.valueOf(playersOccupying[0]));
                 player2occupying.setText(String.valueOf(playersOccupying[1]));
