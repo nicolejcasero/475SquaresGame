@@ -17,6 +17,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.PopupWindow;
@@ -28,8 +29,7 @@ public class GameActivity extends AppCompatActivity implements PlayersStateView 
 
 
     protected GameView gameView;
-    protected TextView player1occupying,
-            player2occupying, currentPlayerPointer;
+    protected TextView player1occupying, player2occupying, currentPlayerPointer;
     protected ImageView player1name, player2name;
     Player[] players;
     Integer[] playersOccupying = new Integer[]{0, 0};
@@ -45,19 +45,21 @@ public class GameActivity extends AppCompatActivity implements PlayersStateView 
 
         player1name = (ImageView) findViewById(R.id.player1name);
         Bundle bundle = getIntent().getExtras();
+
+        //Set player character
         if (bundle != null) {
             int resId = bundle.getInt("resId");
             player1name.setImageResource(resId);
         }
+
         player2name = (ImageView) findViewById(R.id.player2name);
-//        player1state = (TextView) findViewById(R.id.player1state);
-//        player2state = (TextView) findViewById(R.id.player2state);
         player1occupying = (TextView) findViewById(R.id.player1occupying);
         player2occupying = (TextView) findViewById(R.id.player2occupying);
         currentPlayerPointer = (TextView) findViewById(R.id.playerNowPointer);
 
         players = new Player[]{new HumanPlayer("Player 1"), new CPUPlayer("CPU")};
         startGame(players);
+
     }
 
     private void startGame(Player[] players) {
@@ -66,17 +68,14 @@ public class GameActivity extends AppCompatActivity implements PlayersStateView 
 
     }
 
+    //Update turns
     public void updateState() {
         runOnUiThread(new Runnable() {
             @Override
             public void run() {
                 if (currentPlayer == players[0]) {
-//                    player1state.setText("Thinking");
-//                    player2state.setText("Waiting");
                     currentPlayerPointer.setText("YOUR TURN");
                 } else if (currentPlayer == players[1]) {
-//                    player2state.setText("Thinking");
-//                    player1state.setText("Waiting");
                     currentPlayerPointer.setText("THEIR TURN");
                 }
                 player1occupying.setText(String.valueOf(playersOccupying[0]));
@@ -85,6 +84,7 @@ public class GameActivity extends AppCompatActivity implements PlayersStateView 
         });
     }
 
+    //Set current player
     @Override
     public void setCurrentPlayer(Player player) {
         currentPlayer = player;

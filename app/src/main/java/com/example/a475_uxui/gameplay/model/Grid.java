@@ -64,7 +64,7 @@ public class Grid extends Observable{
 
             if (!newBoxOccupied)
                 toNextPlayer();
-            //Pause after CPU player
+            //Pause after player
             try {
                 Thread.currentThread().sleep( 1500);
             } catch (InterruptedException e) {

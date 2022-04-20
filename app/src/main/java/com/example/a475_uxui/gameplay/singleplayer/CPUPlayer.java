@@ -1,3 +1,6 @@
+/**
+ * Chooses move for CPU player
+ */
 package com.example.a475_uxui.gameplay.singleplayer;
 
 import java.util.ArrayList;

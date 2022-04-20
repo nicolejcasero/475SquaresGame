@@ -49,12 +49,10 @@ public class GameView extends View implements Observer {
             }
         });
 
-        //Hardcoded colors for player for now
         playerColors = new int[]{getResources().getColor(R.color.tanish_pink),
                 getResources().getColor(R.color.dark_teal)};
     }
 
-    //computer color turns black after first click, then purple to represent past turns
     public void setPlayersState(PlayersStateView playersState) {
         this.playersState = playersState;
     }
@@ -75,7 +73,8 @@ public class GameView extends View implements Observer {
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
 
-        canvas.drawColor(0x00FFFFFF);
+        //canvas.drawColor(0x00FFFFFF);
+        canvas.drawColor(getResources().getColor(R.color.blush_pink));
         int min = Math.min(getWidth(), getHeight());
         float radius = GameView.radius * min;
         float start = GameView.start * min;
@@ -85,37 +84,40 @@ public class GameView extends View implements Observer {
         float add5 = GameView.add5 * min;
         float add6 = GameView.add6 * min;
 
-        //paint lines
+
         paint.setColor(getResources().getColor(R.color.white));
+        //paint lines
         for (int i = 0; i < game.getHeight() + 1; i++) {
             for (int j = 0; j < game.getWidth(); j++) {
                 Line horizontal = new Line(Direction.HORIZONTAL, i, j);
                 //sets color of horizontal lines to grey after they've been selected
-                if (horizontal.equals(game.getLatestLine())) {
-                    paint.setColor(getResources().getColor(R.color.grey));
-                } else if (game.isLineOccupied(horizontal)) {
+//                if (horizontal.equals(game.getLatestLine())) {
+//                    paint.setColor(getResources().getColor(R.color.grey));
+//                } else
+
+                if (game.isLineOccupied(horizontal)) {
                     if (game.getLineOccupier(horizontal) == 1)
                         paint.setColor(playerColors[0]);
                     else
                         paint.setColor(playerColors[1]);
                 } else {
                     paint.setColor(getResources().getColor(R.color.white));
+
                 }
                 float right = start + add5 * i + add1 - add2;
                 canvas.drawRect(start + add5 * j + add1, start + add5 * i
                         + add2, start + add5 * (j + 1), right, paint);
 
                 Line vertical = new Line(Direction.VERTICAL, j, i);
-                //sets color of vertical lines to grey after they've been selected
-                if (vertical.equals(game.getLatestLine())) {
-                    paint.setColor(getResources().getColor(R.color.grey));
-                } else if (game.isLineOccupied(vertical)) {
+
+               if (game.isLineOccupied(vertical)) {
                     if (game.getLineOccupier(vertical) == 1)
                         paint.setColor(playerColors[0]);
                     else
                         paint.setColor(playerColors[1]);
                 } else {
-                    paint.setColor(getResources().getColor(R.color.white));
+                   paint.setColor(getResources().getColor(R.color.white));
+
                 }
                 canvas.drawRect(start + add5 * i + add2, start + add5 * j + add1, right, start + add5 * (j + 1), paint);
             }
@@ -124,7 +126,6 @@ public class GameView extends View implements Observer {
         //paint boxes
         for (int i = 0; i < game.getWidth(); i++) {
             for (int j = 0; j < game.getHeight(); j++) {
-                //paint.setColor(game.getBoxOccupier(j, i) == null ? Color.TRANSPARENT : playerColors[Player.indexIn(game.getBoxOccupier(j, i), game.getPlayers())]);
 
                 if (game.getBoxOccupier(j, i) == null) {
                     paint.setColor(Color.TRANSPARENT);
