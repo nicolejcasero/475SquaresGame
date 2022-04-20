@@ -1,15 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!--<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
-<!--    xmlns:tools="http://schemas.android.com/tools"-->
-<!--    android:layout_width="match_parent"-->
-<!--    android:layout_height="match_parent"-->
-<!--    android:orientation="vertical"-->
-<!--    android:paddingBottom="@dimen/activity_vertical_margin"-->
-<!--    android:paddingLeft="@dimen/activity_horizontal_margin"-->
-<!--    android:paddingRight="@dimen/activity_horizontal_margin"-->
-<!--    android:paddingTop="@dimen/activity_vertical_margin"-->
-<!--    android:background="@color/light_turquoise"-->
-<!--    tools:context=".gameplay.GameActivity">-->
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -19,11 +8,10 @@
     android:background="@color/light_turquoise">
 
 <!--Creates top bar-->
-
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/appBarLayout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -37,7 +25,7 @@
             <androidx.appcompat.widget.Toolbar
                 android:id="@+id/toolbar"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:background="@color/light_turquoise"
                 android:minHeight="?attr/actionBarSize"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -51,9 +39,6 @@
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="16dp"
                 android:background="#00000000"
-                android:contentDescription="@string/todo"
-                android:minWidth="48dp"
-                android:minHeight="48dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
@@ -73,9 +58,8 @@
                 app:srcCompat="@drawable/home" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
-
-
     </com.google.android.material.appbar.AppBarLayout>
+
     <ImageView
         android:id="@+id/logo"
         android:layout_width="wrap_content"
@@ -156,7 +140,8 @@
             android:shadowDx="2"
             android:shadowDy="6"
             android:shadowRadius="7"
-            android:fontFamily="sans-serif-condensed-medium"
+            android:fontFamily="@font/josefin_sans"
+            android:textStyle="bold"
             android:text="YOUR TURN"
             android:textColor="@color/blush_pink" />
 
