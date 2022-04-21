@@ -39,11 +39,14 @@
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="16dp"
                 android:background="#00000000"
+                android:minWidth="48dp"
+                android:minHeight="48dp"
+                android:onClick="onButtonShowPauseWindowClick"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                android:onClick="onButtonShowPauseWindowClick"
-                app:srcCompat="@drawable/pause" />
+                app:srcCompat="@drawable/pause"
+                tools:ignore="SpeakableTextPresentCheck" />
 
             <ImageButton
                 android:id="@+id/homeButton"
@@ -52,6 +55,8 @@
                 android:layout_margin="16dp"
                 android:background="#00000000"
                 android:contentDescription="@string/todo"
+                android:minWidth="48dp"
+                android:minHeight="48dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"

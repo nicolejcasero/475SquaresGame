@@ -4,7 +4,9 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="../../../../layout/custom_preview.xml" value="0.33645833333333336" />
+        <entry key="app/src/main/res/drawable/help_button.xml" value="0.18" />
         <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.18" />
+        <entry key="app/src/main/res/drawable/pause.xml" value="0.313" />
         <entry key="app/src/main/res/layout/activity_game.xml" value="0.2693069458007813" />
         <entry key="app/src/main/res/layout/activity_game_page.xml" value="0.302536231884058" />
         <entry key="app/src/main/res/layout/activity_home_screen.xml" value="0.12952898550724637" />
@@ -25,7 +27,8 @@
         <entry key="app/src/main/res/layout/activity_splash.xml" value="0.22455795951511553" />
         <entry key="app/src/main/res/layout/activity_splash_screen.xml" value="0.19234924316406252" />
         <entry key="app/src/main/res/layout/custom_layout.xml" value="0.23641304347826086" />
-        <entry key="app/src/main/res/layout/pause_popup.xml" value="0.23641304347826086" />
+        <entry key="app/src/main/res/layout/pause_popup.xml" value="0.2885941569010417" />
+        <entry key="app/src/main/res/menu/menu_pop_up.xml" value="0.3098958333333333" />
         <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1" />
         <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.2625" />
       </map>

@@ -144,8 +144,8 @@ public class GameActivity extends AppCompatActivity implements PlayersStateView 
                 getSystemService(LAYOUT_INFLATER_SERVICE);
         View pauseView = inflater.inflate(R.layout.pause_popup, null);
 
-        int width = LinearLayout.LayoutParams.WRAP_CONTENT;
-        int height = LinearLayout.LayoutParams.WRAP_CONTENT;
+        int width = LinearLayout.LayoutParams.MATCH_PARENT;
+        int height = LinearLayout.LayoutParams.MATCH_PARENT;
         boolean focusable = true;
         final PopupWindow pauseWindow = new PopupWindow(pauseView, width, height, focusable);
 
@@ -157,6 +157,14 @@ public class GameActivity extends AppCompatActivity implements PlayersStateView 
                 return true;
             }
         });
+    }
+
+    public void restartGame(View view) {
+        Intent intent= getIntent();
+        finish();
+        startActivity(intent);
+
+
     }
 
 //    @Override
