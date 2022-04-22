@@ -66,7 +66,7 @@ public class Grid extends Observable{
                 toNextPlayer();
             //Pause after player
             try {
-                Thread.currentThread().sleep( 1500);
+                Thread.currentThread().sleep( 1000);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
