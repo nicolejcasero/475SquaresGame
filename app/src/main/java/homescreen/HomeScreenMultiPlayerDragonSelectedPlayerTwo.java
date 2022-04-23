@@ -49,6 +49,7 @@ public class HomeScreenMultiPlayerDragonSelectedPlayerTwo extends AppCompatActiv
 
     public void openGame() {
         Intent intent = new Intent(this, GameActivityMulti.class);
+        intent.putExtra("resId", R.drawable.dragon_avatar);
         startActivity(intent);
     }
 
