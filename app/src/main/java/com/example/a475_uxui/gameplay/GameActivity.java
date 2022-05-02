@@ -124,8 +124,8 @@ public class GameActivity extends AppCompatActivity implements PlayersStateView 
             @Override
             public void run() {
                 new AlertDialog.Builder(GameActivity.this)
-                        .setTitle("Squares")
-                        .setMessage(winner.getName() + " Wins!")
+                        .setTitle(winner.getName() + " Wins!")
+                      //  .setMessage(winner.getName() + " Wins!")
                         .setPositiveButton("Restart", new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface dialog, int which) {
                                 recreate();

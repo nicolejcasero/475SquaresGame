@@ -88,6 +88,8 @@ public class GameActivityMulti extends AppCompatActivity implements PlayersState
             @SuppressLint("SetTextI18n")
             @Override
             public void run() {
+                currentPlayerPointer.setText("PLAYER 1 TURN");
+
                 if (currentPlayer == players[0]) {
                     currentPlayerPointer.setText("PLAYER 1 TURN");
                 } else if (currentPlayer == players[1]) {
