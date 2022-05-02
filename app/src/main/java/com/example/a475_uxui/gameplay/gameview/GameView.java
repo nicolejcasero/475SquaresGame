@@ -4,6 +4,8 @@ import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
+import android.media.MediaParser;
+import android.media.MediaPlayer;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.MotionEvent;
@@ -51,6 +53,8 @@ public class GameView extends View implements Observer {
 
         playerColors = new int[]{getResources().getColor(R.color.tanish_pink),
                 getResources().getColor(R.color.dark_teal)};
+
+
     }
 
     public void setPlayersState(PlayersStateView playersState) {
